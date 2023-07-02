@@ -1,4 +1,4 @@
--- https://twitter.com/aemkei/status/1378106731386040322?s=46&t=vAQ328oQf-s81-tV9T-wKQ
+-- https://twitter.com/aemkei/status/1378106731386040322
 
 import "CoreLibs/sprites"
 
