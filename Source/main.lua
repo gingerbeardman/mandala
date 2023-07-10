@@ -1,4 +1,4 @@
--- https://twitter.com/aemkei/status/1378106731386040322
+-- https://twitter.com/aemkei/status/1378106731386040322?s=46&t=vAQ328oQf-s81-tV9T-wKQ
 
 import "CoreLibs/sprites"
 
@@ -44,8 +44,6 @@ local var = 5
 local changed = true
 
 function drawPixels()
-	if changed == false then return end
-	
 	gfx.lockFocus(imgSprite)
 	for x=0,W do
 		for y=0,H do
@@ -59,7 +57,7 @@ function drawPixels()
 		end
 	end
 	gfx.unlockFocus()
-	
+
 	changed = false
 end
 
@@ -68,6 +66,8 @@ function drawHud()
 	gfx.clear(gfx.kColorWhite)
 	fnt:drawText(string.format(ft,var), 5,5)
 	gfx.unlockFocus()
+
+	changed = false
 end
 
 function math.ring(a, min, max)
@@ -137,8 +137,10 @@ local myInputHandlers = {
 playdate.inputHandlers.push(myInputHandlers)
 
 function playdate.update()
-	drawPixels()
-	drawHud()
+	if changed == true then
+		drawPixels()
+		drawHud()
+	end
 
 	gfx.sprite.update()
 end
