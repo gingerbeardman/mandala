@@ -1,6 +1,6 @@
 # mandala
 
-A little playground for testing pixel logic patternson [Playdate](https://play.date)
+A little playground for testing pixel logic patterns on [Playdate](https://play.date)
 
 ![https://i.imgur.com/OQHNwm7.gif](https://i.imgur.com/OQHNwm7.gif)
 
